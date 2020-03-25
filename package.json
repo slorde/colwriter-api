@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha app/tests/*test.js    --exit"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +14,10 @@
     "mongoose": "^5.9.2",
     "nodemon": "^2.0.2",
     "require-dir": "^1.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^7.1.1"
   }
 }
