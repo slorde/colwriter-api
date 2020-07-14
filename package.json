@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha app/tests/*test.js --exit",
+    "test-unit": "mocha app/modules/*/test/integration/*unit-test.js --exit",
+    "test-integration": "mocha app/modules/*/test/integration/*integration-test.js --exit",
     "lint": "./node_modules/.bin/eslint app/*/*.js",
     "beautify": "./node_modules/.bin/eslint app/*/*.js --fix"
   },
@@ -22,6 +23,7 @@
     "mongodb": "^3.5.9",
     "mongoose": "^5.9.2",
     "nodemon": "^2.0.2",
+    "object-hash": "^2.0.3",
     "require-dir": "^1.2.0"
   },
   "devDependencies": {

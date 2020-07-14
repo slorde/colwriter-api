@@ -1,7 +1,7 @@
 const express = require('express');
-const auth = require('../middleware/auth');
-const { Project, validate } = require('../models/project-model');
-const { User } = require('../models/user-model');
+const auth = require('../../middleware/auth');
+const { Project, validate } = require('./model/project-model');
+const { User } = require('../user/model/user-model');
 
 const router = express.Router();
 

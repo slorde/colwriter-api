@@ -1,9 +1,9 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const { ObjectID } = require('mongodb');
-const server = require('../../index');
-const { User } = require('../models/user-model');
-const { Project } = require('../models/project-model');
+const server = require('../../../../../index');
+const { User } = require('../../../user/model/user-model');
+const { Project } = require('../../model/project-model');
 
 chai.use(chaiHttp);
 const { expect } = chai;

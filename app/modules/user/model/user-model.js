@@ -4,18 +4,26 @@ const Joi = require('joi');
 const mongoose = require('mongoose');
 
 const UserSchema = mongoose.Schema({
+  id: {
+    type: String,
+    require: true
+  },
   name: {
     type: String,
-    require: true,
+    require: true
   },
   password: {
     type: String,
-    required: true,
+    required: true
   },
   email: {
     type: String,
-    required: true,
+    required: true
   },
+  createdAt: {
+    type: Date,
+    default: new Date()
+  }
 });
 
 UserSchema.methods.generateAuthToken = () => {
