@@ -6,16 +6,14 @@
   "scripts": {
     "test-unit": "mocha app/modules/*/test/integration/*unit-test.js --exit",
     "test-integration": "mocha app/modules/*/test/integration/*integration-test.js --exit",
-    "lint": "./node_modules/.bin/eslint app/*/*.js",
-    "beautify": "./node_modules/.bin/eslint app/*/*.js --fix"
+    "lint": "./node_modules/.bin/eslint app/**",
+    "beautify": "./node_modules/.bin/eslint app/** --fix"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
-    "chai": "^4.2.0",
-    "chai-http": "^4.3.0",
     "config": "^3.3.1",
     "express": "^4.17.1",
     "joi": "^14.3.1",
@@ -27,8 +25,11 @@
     "require-dir": "^1.2.0"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "eslint": "^7.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-chai-friendly": "^0.6.0",
     "eslint-plugin-import": "^2.21.2",
     "mocha": "^7.1.1"
   }
