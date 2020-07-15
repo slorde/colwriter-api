@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-unit": "mocha app/modules/*/test/integration/*unit-test.js --exit",
+    "test": "npm run test-unit && npm run test-integration",
+    "test-unit": "mocha app/modules/*/test/unit/*unit-test.js --exit",
     "test-integration": "mocha app/modules/*/test/integration/*integration-test.js --exit",
     "lint": "./node_modules/.bin/eslint app/**",
     "beautify": "./node_modules/.bin/eslint app/** --fix"
@@ -31,6 +32,7 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-chai-friendly": "^0.6.0",
     "eslint-plugin-import": "^2.21.2",
-    "mocha": "^7.1.1"
+    "mocha": "^7.1.1",
+    "sinon": "^9.0.2"
   }
 }
