@@ -1,4 +1,4 @@
-/* eslint max-classes-per-file: ["error", 3] */
+/* eslint max-classes-per-file: ["error", 4] */
 class CustomError extends Error { }
 
 class BadRequestError extends CustomError {
@@ -15,4 +15,11 @@ class AuthenticationFailure extends CustomError {
     }
 }
 
-module.exports = { BadRequestError, CustomError, AuthenticationFailure };
+class UnexpectedError extends CustomError {
+    constructor(message) {
+        super(message);
+        this.statusCode = 500;
+    }
+}
+
+module.exports = { BadRequestError, CustomError, AuthenticationFailure, UnexpectedError };

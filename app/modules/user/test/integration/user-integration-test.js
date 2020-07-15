@@ -8,7 +8,7 @@ const { expect } = chai;
 const path = '/api/users';
 let user;
 
-describe.only('User integration test', () => {
+describe('User integration test', () => {
     beforeEach((done) => {
         User.deleteMany({}, () => {
             done();

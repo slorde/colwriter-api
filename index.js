@@ -17,7 +17,7 @@ mongoose.connect(
 );
 
 app.use(express.json());
-app.use('/api/users', require('./app/modules/user/route.js'));
+app.use('/api/users', require('./app/modules/user/user-route.js'));
 app.use('/api/projects', require('./app/modules/project/project-route.js'));
 
 requireDir("./app/modules");
