@@ -52,7 +52,7 @@ class Controller {
             if (error instanceof CustomError) {
                 res.status(error.statusCode).send({ message: error.message });
             } else {
-                res.status(500).send({ message: 'Unexpected error'});
+                res.status(500).send({ message: 'Unexpected error' });
             }
         }
 
